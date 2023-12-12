@@ -51,7 +51,7 @@ export const updatePost = async (request, response) =>{
         return response.status(200).json({msg: "post updated successfully"});
     }
     catch(error){
-        return response.status(500).json({error: error.message})
+        return response.status(500).json({error: error.message})  
     } 
 }
 
