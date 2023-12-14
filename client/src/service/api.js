@@ -14,11 +14,11 @@ const axiosInstance=axios.create({
 
 axiosInstance.interceptors.request.use(
     function(config){
-        if(config.TYPE.params){
-            config.params=config.TYPE.params;
+        if(config.TYPE.query){
+            config.query=config.TYPE.query;
         }
-        else if( config.TYPE.query){
-            config.url = config.url + '/' + config.TYPE.query;
+        else if( config.TYPE.params){
+            config.url = config.url + '/' + config.TYPE.params;
         }
         return config;
     },

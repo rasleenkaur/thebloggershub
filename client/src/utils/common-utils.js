@@ -7,17 +7,17 @@ export const addElipsis = (str, limit) =>{
     return str.length > limit ? str.substring(0,limit) + '...': str;
 }
 
-export const getType = (value, body) =>{
-    if(value.params){
-        return {params: body}
+export const getType = (value, body) =>{ 
+    if(value.query){
+        return {query: body}
     }
-    else if(value.query){
+    else if(value.params){
             if(typeof body === 'object')
             {
-                return {query: body._id}
+                return {params: body._id}
             }
             else{
-                return {query: body}
+                return {params: body}
             }
     }
     return {};

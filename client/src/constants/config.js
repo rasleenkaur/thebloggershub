@@ -33,11 +33,11 @@ export const SERVICE_URLS = {
     userLogin :{ url: '/login' , method: 'POST'},
     uploadFile: {url: '/file/upload', method: 'POST'},
     createPost: {url: 'create' , method: 'POST'},
-    getAllPosts: {url: '/posts', method: 'GET', params: true},
-    getPostById: {url: 'post', method : 'GET' , query: true},
-    updatePost: {url: 'update', method: 'PUT', query: true},
-    deletePost: {url: 'delete', method: 'DELETE', query: true},
+    getAllPosts: {url: '/posts', method: 'GET', query: true},
+    getPostById: {url: 'post', method : 'GET' , params: true},
+    updatePost: {url: 'update', method: 'PUT', params: true},
+    deletePost: {url: 'delete', method: 'DELETE', params: true},
     newComment : {url: '/comment/new', method: 'POST'},
-    getAllComments: {url: 'comments', method: 'GET', query: true},
-    deleteComment: {url: 'comment/delete', method: 'DELETE', query: true}
+    getAllComments: {url: 'comments', method: 'GET', params: true},
+    deleteComment: {url: 'comment/delete', method: 'DELETE', params: true}
 }

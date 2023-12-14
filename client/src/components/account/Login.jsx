@@ -121,7 +121,7 @@ const Login = ({isUserAuthenticated})=>{
 
    return (
     <Component>
-        <Box>
+          <Box>
             <Image src={imageURL} alt='login'/>
             {
                 account==='login' ?
@@ -135,9 +135,9 @@ const Login = ({isUserAuthenticated})=>{
             </Wrapper> 
             :
             <Wrapper>       
-                <TextField variant="standard" name="name" label="Enter Name"  onChange={onInputChange}/>
-                <TextField variant="standard" name="username" label="Enter Username" onChange={onInputChange}/>
-                <TextField variant="standard" name="password" label="Enter Password" onChange={onInputChange}/>
+                <TextField variant="standard" value={signup.name} label="Enter Name" name="name" onChange={onInputChange}/>
+                <TextField variant="standard" value={signup.username}  label="Enter Username" name="username" onChange={onInputChange}/>
+                <TextField variant="standard" value={signup.password}  label="Enter Password" name="password" onChange={onInputChange}/>
                 {error && <Error>{error}</Error>}
                 <SignupButton onClick={signupUser} >Signup</SignupButton>
                 <Typography style={{textAlign: 'center', color:'#878787'}} >OR</Typography>
